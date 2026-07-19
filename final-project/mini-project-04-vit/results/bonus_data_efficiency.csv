@@ -1,0 +1,7 @@
+model,fraction,n_train,validation_accuracy
+ResNet-50 head-only,0.25,1057,0.6644591611479028
+ViT-B/16 head-only,0.25,1057,0.8079470198675497
+ResNet-50 head-only,0.5,2114,0.8024282560706402
+ViT-B/16 head-only,0.5,2114,0.9083885209713024
+ResNet-50 head-only,1.0,4228,0.8509933774834437
+ViT-B/16 head-only,1.0,4228,0.9304635761589404

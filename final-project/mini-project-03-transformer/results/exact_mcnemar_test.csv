@@ -1,0 +1,2 @@
+distilbert_correct_tfidf_wrong,tfidf_correct_distilbert_wrong,net_unique_wins_distilbert_minus_tfidf,net_unique_win_rate,exact_mcnemar_p_two_sided
+424,280,144,0.018947368421052633,6.384618914286824e-08

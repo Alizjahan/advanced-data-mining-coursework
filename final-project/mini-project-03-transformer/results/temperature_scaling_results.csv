@@ -1,0 +1,2 @@
+temperature,distilbert_ECE_before,distilbert_ECE_after,distilbert_NLL_before,distilbert_NLL_after
+1.2000000000000002,0.033321924366449054,0.016464096966542663,0.2746572686944454,0.26809884104009385

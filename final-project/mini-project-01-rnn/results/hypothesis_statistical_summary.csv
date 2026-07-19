@@ -1,0 +1,2 @@
+selected_scheme,rapid_MAE_uniform_nonoverlap,rapid_MAE_selected_nonoverlap,rapid_improvement_pct_nonoverlap,wilcoxon_one_sided_p,bootstrap_CI_low_selected_minus_uniform,bootstrap_CI_high_selected_minus_uniform,stable_MAE_change_pct_full_test,cohen_dz_rapid,hypothesis_supported
+strong,2.0824468,2.0599997,1.07792,0.36309194564819336,-0.1909155405380509,0.142711599103429,1.4190799,-0.05481021,False

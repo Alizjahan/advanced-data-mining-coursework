@@ -1,0 +1,3 @@
+correct,n,mean_length,median_length,mean_confidence
+False,682,38.403225806451616,37.0,0.80692226
+True,6918,37.65524718126626,37.0,0.9566399

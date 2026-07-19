@@ -1,0 +1,2 @@
+head_macro_f1,last2_macro_f1,full_macro_f1,last2_trainable_parameters,full_trainable_parameters,selected_strategy,hypothesis_supported
+0.8723984003110337,0.9648636174568687,0.9289576526556728,14206502,85827878,last2,True

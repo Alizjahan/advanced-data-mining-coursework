@@ -1,0 +1,2 @@
+vit_correct_resnet_wrong,resnet_correct_vit_wrong,mcnemar_p_value_two_sided,delta_macro_f1_vit_minus_resnet,bootstrap_95ci_low,bootstrap_95ci_high
+23,21,0.880395821280672,0.0021273956484023637,-0.012424599968206454,0.016185975987745897
