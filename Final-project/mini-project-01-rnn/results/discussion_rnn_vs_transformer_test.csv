@@ -1,2 +1,0 @@
-comparison,mean_MAE_RNN,mean_MAE_Transformer,wilcoxon_statistic,p_value_two_sided
-Transformer vs GRU,1.7181333,2.5833895,1376.0,9.476982565169026e-07
