@@ -280,11 +280,11 @@ Isolation Forest average precision:
 ```text
 ecg-anomaly-detection-autoencoder/
 ├── README.md
+├── report.pdf
 ├── requirements.txt
 ├── REFERENCES.md
 ├── ecg_anomaly_detection_autoencoder.ipynb
-├── figures/
-└── results/
+└── results/         
 ```
 
 Trained model checkpoints are **not included in the repository because of file-size constraints**. The model can be reproduced by running the notebook end-to-end.
