@@ -1,0 +1,2 @@
+low_data_sizes,mean_low_data_gap_macro_f1,final_train_size,final_validation_gap_macro_f1,hypothesis_supported_on_validation
+"500,2000",0.06564651615804479,8000,0.01697177274888928,True
