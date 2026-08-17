@@ -1,3 +1,0 @@
-model,validation_accuracy,validation_macro_f1,trainable_parameters,training_seconds
-CNN control,0.9536423841059603,0.9534681690629635,534822,36.87463331999993
-CNN + late attention,0.8995584988962473,0.8930754372455878,798502,37.72555918900002

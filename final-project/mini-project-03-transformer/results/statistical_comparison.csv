@@ -1,2 +1,0 @@
-DistilBERT_only_correct,TFIDF_only_correct,McNemar_p_value,Delta_macro_F1,Bootstrap_CI_low,Bootstrap_CI_high
-424,280,6.384618914286824e-08,0.01955755047438601,0.012772959951151176,0.02636720751186444

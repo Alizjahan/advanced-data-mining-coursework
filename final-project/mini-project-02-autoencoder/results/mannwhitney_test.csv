@@ -1,2 +1,0 @@
-U_statistic,p_value,alternative,n_normal,n_abnormal,median_normal,median_abnormal,CLES_P(abnormal>normal)
-4852239.0,0.0,abnormal errors > normal errors,2627,1873,0.12847947,1.8255069,0.9861530766684057
