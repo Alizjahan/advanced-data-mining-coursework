@@ -1,0 +1,2 @@
+comparison,mean_long_MAE_GRU,mean_long_MAE_Attention,mean_gain_degC,wilcoxon_statistic,p_value_one_sided
+GRU_Attention < GRU on h19-h24 MAE,2.1836665,2.2282577,-0.04459119,3177.0,0.7063226068713568
