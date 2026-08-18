@@ -130,22 +130,34 @@ final-project/
 │
 ├── mini-project-01-rnn/
 │   ├── README.md
-│   ├── notebook.ipynb
+│   ├── report.pdf
+│   ├── requirements.txt
+│   ├── REFERENCES.md
+│   ├── rnn_weather_forecasting.ipynb
 │   └── results/
 │
 ├── mini-project-02-autoencoder/
 │   ├── README.md
-│   ├── notebook.ipynb
+│   ├── report.pdf
+│   ├── requirements.txt
+│   ├── REFERENCES.md
+│   ├── ecg_anomaly_detection_autoencoder.ipynb
 │   └── results/
 │
 ├── mini-project-03-transformer/
 │   ├── README.md
-│   ├── notebook.ipynb
+│   ├── report.pdf
+│   ├── requirements.txt
+│   ├── REFERENCES.md
+│   ├── transformer_text_classification.ipynb
 │   └── results/
 │
 └── mini-project-04-vit/
     ├── README.md
-    ├── notebook.ipynb
+    ├── report.pdf
+    ├── requirements.txt
+    ├── REFERENCES.md
+    ├── vit_plant_disease_classification.ipynb
     └── results/
 ```
 
