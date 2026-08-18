@@ -167,6 +167,8 @@ Observed disagreements:
 ```text
 DistilBERT correct / TF-IDF wrong: 424
 TF-IDF correct / DistilBERT wrong: 280
+Net unique wins for DistilBERT:    144
+Exact two-sided McNemar p-value:   6.38e-08
 ```
 
 The notebook also performs a paired bootstrap analysis for the Macro-F1 difference.
