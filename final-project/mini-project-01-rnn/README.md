@@ -98,7 +98,7 @@ The weighting strength is selected using validation performance only.
 
 ### Result
 
-The selected change-aware model produced a small improvement on rapid-change windows, while remaining within the predefined stable-regime degradation limit. However, the improvement was not statistically significant.
+Validation selected the **strong** change-aware weighting scheme. On the non-overlapping rapid-change test windows used for inference, it produced a small MAE improvement while remaining within the predefined stable-regime degradation limit. The improvement was not statistically significant.
 
 ```text
 Uniform rapid-window MAE:        2.08245
@@ -117,7 +117,14 @@ The negative result is retained because the experiment was hypothesis-driven and
 
 ### GRU with Temporal Attention
 
-A GRU with additive attention over recurrent states is trained under the same general forecasting setup. Attention weights are inspected to analyze which historical timesteps receive greater emphasis.
+A GRU with additive attention over recurrent states was evaluated against the plain GRU.
+
+| Model         | Mean MAE | Mean RMSE | MAE h1-h6 | MAE h19-h24 |
+| ------------- | -------: | --------: | --------: | ----------: |
+| GRU           | **1.7832** | **2.2772** | **1.1145** | **2.2132** |
+| GRU Attention | 1.8131 | 2.2965 | 1.1494 | 2.2507 |
+
+The attention model did not improve long-horizon forecasting performance. The one-sided Wilcoxon test for h19-h24 gave **p = 0.7063**. The largest average learned attention weights occurred around 53-57 hours before the forecast origin.
 
 ### GRU vs Transformer
 
@@ -137,7 +144,12 @@ The notebook also studies both architectures across:
 
 ### Prediction Intervals
 
-A supplementary probabilistic experiment constructs empirical 90% prediction intervals using validation residual quantiles and evaluates interval coverage and width on the test set.
+A supplementary probabilistic experiment constructs empirical 90% prediction intervals using validation residual quantiles.
+
+```text
+Empirical test coverage: 91.89%
+Mean interval width:      8.0395 °C
+```
 
 ## Statistical Analysis
 
@@ -149,6 +161,7 @@ The notebook includes:
 - One-sided paired Wilcoxon test for the original contribution
 - Paired bootstrap confidence intervals
 - Multi-seed robustness analysis
+- Paired Wilcoxon tests for the attention and GRU-vs-Transformer comparisons
 
 Non-overlapping forecast windows are used for inferential tests to reduce dependence from overlapping sliding windows.
 
@@ -186,7 +199,7 @@ pip install -r requirements.txt
 2. Open `rnn_weather_forecasting.ipynb`.
 3. Run the notebook from top to bottom.
 4. The notebook loads the Jena Climate dataset from Kaggle when available, or downloads the public TensorFlow/Keras copy.
-5. Generated plots and result tables can be saved under `figures/` and `results/`.
+5. The executed notebook writes figures to `figures/`, result tables to `results/`, and model checkpoints to `models/`. The repository itself keeps the compact structure shown above.
 
 ## Reproducibility
 
