@@ -120,10 +120,10 @@ The partial-unfreezing strategy achieved the highest validation Macro-F1 while u
 
 ## Final Test Results
 
-| Model                    |   Accuracy |   Macro-F1 | Trainable Parameters |
-| ------------------------ | ---------: | ---------: | -------------------: |
-| ViT-B/16 — last 2 blocks | **0.9713** | **0.9713** |           14,206,502 |
-| ResNet-50                |     0.9691 |     0.9691 |           23,585,894 |
+| Model                    |   Accuracy |   Macro-F1 | Trainable Parameters | Training Time (s) |
+| ------------------------ | ---------: | ---------: | -------------------: | ----------------: |
+| ViT-B/16 — last 2 blocks | **0.9713** | **0.9713** |           14,206,502 |            182.98 |
+| ResNet-50                |     0.9691 |     0.9691 |           23,585,894 |            106.59 |
 
 The raw test metrics slightly favor the selected ViT configuration.
 
@@ -297,6 +297,15 @@ resnet_per_class_metrics.csv
 vit_per_class_metrics.csv
 vit_unfreezing_ablation.csv
 ```
+
+The executed notebook also saved the trained model checkpoints under its working `models/` directory:
+
+```text
+resnet50.pt
+vit_last2.pt
+```
+
+These execution artifacts do not change the repository structure shown above.
 
 ## Reproducibility
 
