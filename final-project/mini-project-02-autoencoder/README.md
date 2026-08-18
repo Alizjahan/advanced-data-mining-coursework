@@ -143,6 +143,13 @@ Observed change:
 
 The optimized threshold improved precision but reduced recall and overall F1 on the final test set.
 
+Because both threshold methods use the same reconstruction-error ranking, their threshold-independent score metrics are identical:
+
+```text
+Average Precision: 0.9515
+PR-AUC:            0.9514
+```
+
 **Conclusion:** the expected F1/recall improvement was not consistently supported.
 
 The negative result is retained as part of the project rather than being hidden or retuned on the test set.
@@ -159,7 +166,7 @@ Observed common-language effect size:
 P(error_anomalous > error_normal) = 0.986153
 ```
 
-The notebook reports that the p-value is below floating-point resolution.
+The notebook reports that the p-value is below floating-point resolution, indicating that anomalous reconstruction errors are significantly larger than normal reconstruction errors.
 
 ### Paired Bootstrap for Threshold Intervention
 
@@ -229,11 +236,20 @@ Results:
 | No attention   |     0.7726 |     0.8398 |     0.8048 |         2.2669 |
 | Self-attention | **0.9030** | **0.9744** | **0.9373** |     **9.6741** |
 
-Observed F1 improvement:
+Observed changes from adding self-attention:
 
 ```text
-+0.1325
+Δ F1:                  +0.1325
+Δ Recall:              +0.1345
+Δ Error contrast:      +7.4072
 ```
+
+Additional executed-run details:
+
+| Model          | Threshold | Parameters | Epochs Ran |
+| -------------- | --------: | ---------: | ---------: |
+| No attention   |    0.0021 |      5,345 |        200 |
+| Self-attention |    0.0140 |      9,633 |        200 |
 
 The highest average attention positions were:
 
@@ -249,6 +265,16 @@ The threshold comparison is repeated across five seeds:
 7, 21, 42, 77, 123
 ```
 
+Per-seed F1 change:
+
+| Seed | Baseline F1 | Optimized F1 | Δ F1 |
+| ---: | ----------: | -----------: | ---: |
+| 7    |      0.9627 |       0.9298 | -0.0328 |
+| 21   |      0.9375 |       0.9564 | +0.0189 |
+| 42   |      0.9615 |       0.9166 | -0.0449 |
+| 77   |      0.9651 |       0.9548 | -0.0103 |
+| 123  |      0.9633 |       0.9418 | -0.0215 |
+
 Mean change across seeds:
 
 ```text
@@ -257,7 +283,7 @@ Mean change across seeds:
 Δ F1:        -0.0181 ± 0.0244
 ```
 
-The optimized threshold did not produce a consistent F1 improvement across seeds.
+Only seed 21 showed an F1 improvement; the optimized threshold did not produce a consistent F1 improvement across seeds.
 
 ## Bonus — Isolation Forest
 
@@ -338,6 +364,14 @@ threshold_bootstrap_ci.csv
 threshold_comparison.csv
 threshold_effect.csv
 ```
+
+The executed notebook also saved the trained main Autoencoder as:
+
+```text
+/kaggle/working/ecg_autoencoder.keras
+```
+
+This execution artifact does not change the repository structure shown above.
 
 It also generated 12 figures covering:
 
