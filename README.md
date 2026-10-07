@@ -1,6 +1,6 @@
 # Advanced Data Mining Coursework
 
-![Advanced Data Mining](Header.jpg)
+![Advanced Data Mining](Header1.jpg)
 
 Advanced Data Mining coursework featuring five assignments and a multi-part deep learning final project across RNNs, Autoencoders, Transformers, and Vision Transformers.
 
